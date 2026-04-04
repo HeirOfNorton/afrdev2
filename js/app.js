@@ -1,9 +1,7 @@
-import * as m from "/afrdev2/js/mithril.min.js"
+import * as m from "./mithril.min.js";
 
-const Temp = {
-    view: () => {
-        return m("p", "Hello World")
-    }
-}
+const Tempore = {
+    view: () => m("p", "Hello World")
+};
 
-m.mount(document.body, Temp)
+m.mount(document.body, Tempore);
