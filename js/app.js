@@ -1,7 +1,9 @@
 // import * as m from "./mithril.min.js";
 
-const Tempore = {
-    view: () => m("p", "Hello World")
+import WorkComponent from "./WorkComponent.js"
+
+const MainView = {
+    view: () => m(".container", WorkComponent )
 };
 
-m.mount(document.body, Tempore);
+m.mount(document.body, MainView);
