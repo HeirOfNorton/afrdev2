@@ -3,7 +3,7 @@
 import WorkComponent from "./WorkComponent.js"
 
 const MainView = {
-    view: () => m(".container", WorkComponent )
+    view: () => m(".container", [WorkComponent] )
 };
 
 m.mount(document.body, MainView);
