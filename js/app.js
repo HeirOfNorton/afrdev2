@@ -1,4 +1,6 @@
-import {m} from "./mithril.min.js";
+/** Loaded globally
+// import m from "./mithril.min.js";
+// */
 
 const Temp = {
     view: () => {
