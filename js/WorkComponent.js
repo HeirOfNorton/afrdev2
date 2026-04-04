@@ -1,10 +1,9 @@
 import ResumeModel from "./ResumeModel.js"
 
-function WorkComponent () { return ({
+const WorkComponent = {
     view: () => {
         return m("h1", ResumeModel.basics.name)
     }
-})
 }
 
 export default WorkComponent
