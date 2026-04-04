@@ -10,13 +10,13 @@ const ResumeModel = {
 
 const WorkComponent = {
     view: function(vnode) {
-        return m("h1", "Name Alpha")
+        return m("h1", ResumeModel.basics.name)
     }
 }
 
 const MainView = {
     view: function(vnode) {
-        return m(".container", {}, [WorkComponent])
+        return m(".container", {}, m(WorkComponent))
     }
 }
 
