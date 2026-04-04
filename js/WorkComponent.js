@@ -2,7 +2,7 @@ import ResumeModel from "./ResumeModel.js"
 
 const WorkComponent = {
     view: () => {
-        return m("h1", ResumeModel.basics.name)
+        return m("h1", "meh")
     }
 }
 
