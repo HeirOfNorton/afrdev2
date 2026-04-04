@@ -55,6 +55,47 @@ const ResumeModel = {
         type: "standard",
         template: "basic",
         last_page: "home",
+        basics: {
+            summaryTitle: "Summary",
+        },
+        work: {
+            sectionTitle: "Experience",
+            includeHighlights: true,
+            highlightsTitle: "Accomplishments"
+        },
+        education: {
+            sectionTitle: "Education",
+            includeHighlights: false,
+            highlightsTitle: "Coursework"
+        },
+        skills: {
+
+        },
+        volunteer: {
+
+        },
+        awards: {
+
+        },
+        certificates: {
+
+        },
+        publications: {
+
+        },
+        languages: {
+
+        },
+        interests: {
+
+        },
+        projects: {
+
+        },
+        references: {
+
+        }
+
     },
     saveToLocal: () => {
         window.localStorage?.setItem(
