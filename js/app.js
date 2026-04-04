@@ -20,4 +20,4 @@ const MainView = {
     }
 }
 
-m.mount(document.body, MainView)
+m.mount(document.body, WorkComponent)
