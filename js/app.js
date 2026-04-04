@@ -16,8 +16,8 @@ const WorkComponent = {
 
 const MainView = {
     view: function(vnode) {
-        return m(".container", [WorkComponent] )
+        return m(".container",{} ,WorkComponent)
     }
-};
+}
 
-m.mount(document.body, MainView);
+m.mount(document.body, MainView)
