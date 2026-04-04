@@ -26,7 +26,7 @@ const Layout = {
     view: (vnode) => {
         return m(".container", [
             m("nav", 
-                m(m.route.Link, {href="/"}, "Home"),
+                m(m.route.Link, {href: "/"}, "Home"),
                 m("a", "For later")
             ),
             m("main", vnode.children)
