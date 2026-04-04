@@ -18,12 +18,25 @@ const WorkComponent = {
 
 const MainView = {
     view: function(vnode) {
-        return m(".container", {}, m(WorkComponent))
+        return m(WorkComponent)
+    }
+}
+
+const Layout = {
+    view: (vnode) => {
+        return m(".container", [
+            m("nav", 
+                m(m.route.Link, {href="/"}, "Home"),
+                m("a", "For later")
+            ),
+            m("main", vnode.children)
+        ]
+        )
     }
 }
 
 m.route(document.body, "/", {
     "/": {
-        render: () => m(MainView)
+        render: () => m(Layout, [m(MainView)])
     },
 })
