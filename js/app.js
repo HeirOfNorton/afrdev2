@@ -1,4 +1,4 @@
-import * as m from "mithril.min.js"
+import * as m from "/afrdev2/js/mithril.min.js"
 
 const Temp = {
     view: () => {
