@@ -22,4 +22,8 @@ const MainView = {
     }
 }
 
-m.mount(document.body, MainView)
+m.route(document.body, "/", {
+    "/": {
+        render: () => m(MainView)
+    },
+})
