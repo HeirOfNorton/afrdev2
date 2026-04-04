@@ -1,6 +1,8 @@
 
-export default ResumeModel = {
+const ResumeModel = {
     basics: {
         name: "Test Name",
     }
 }
+
+export default ResumeModel
