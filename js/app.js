@@ -11,13 +11,13 @@ const ResumeModel = {
 }
 
 const WorkComponent = {
-    view: () => {
+    view: function(vnode) {
         return m("h1", ResumeModel.basics.name)
     }
 }
 
 const MainView = {
-    view: () => m(".container", [WorkComponent] )
+    view: function(vnode) { return m(".container", [WorkComponent] ) }
 };
 
 m.mount(document.body, MainView);
