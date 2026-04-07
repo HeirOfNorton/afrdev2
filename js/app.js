@@ -1,24 +1,19 @@
 // import * as m from "./mithril.min.js";
 
 import WorkComponent from "./WorkComponent.js"
+import Basics from ".Basics.js"
 
-/*
-const ResumeModel = {
-    basics: {
-        name: "Test Name",
-    }
-}
-
-const WorkComponent = {
-    view: function(vnode) {
-        return m("h1", ResumeModel.basics.name)
-    }
-}
-*/
-
+// Temporary navigation while developing each page in isolation
 const MainView = {
-    view: function(vnode) {
-        return m(WorkComponent)
+    view: (vnode) => {
+        return m(".container",
+            m("nav", 
+                m("ul",
+                    m("li", m(m.route.Link, {href: "/"}, "Home")),
+                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
+                )
+            ),
+        )
     }
 }
 
@@ -27,7 +22,6 @@ const Layout = {
         return m(".container", [
             m("nav", 
                 m(m.route.Link, {href: "/"}, "Home"),
-                m("a", "For later")
             ),
             m("main", vnode.children)
         ]
@@ -37,6 +31,9 @@ const Layout = {
 
 m.route(document.body, "/", {
     "/": {
-        render: () => m(Layout, [m(MainView)])
+        render: () => m(MainView)
     },
+    "/basics": {
+        render: () => m(Layout, [Basics])
+    }
 })
