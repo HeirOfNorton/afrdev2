@@ -34,6 +34,6 @@ m.route(document.body, "/", {
         render: () => m(MainView)
     },
     "/basics": {
-        render: () => m(Layout, [Basics])
+        render: () => m(Layout, m(Basics))
     }
 })
