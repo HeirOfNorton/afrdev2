@@ -1,7 +1,7 @@
 // import * as m from "./mithril.min.js";
 
 import WorkComponent from "./WorkComponent.js"
-import Basics from ".Basics.js"
+import Basics from "./Basics.js"
 
 // Temporary navigation while developing each page in isolation
 const MainView = {
