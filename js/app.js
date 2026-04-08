@@ -6,7 +6,7 @@ import Basics from "./Basics.js"
 // Temporary navigation while developing each page in isolation
 const MainView = {
     view: (vnode) => {
-        return m(".container",
+        return m(".container.pico",
             m("nav", 
                 m("ul",
                     m("li", m(m.route.Link, {href: "/"}, "Home")),
@@ -19,7 +19,7 @@ const MainView = {
 
 const Layout = {
     view: (vnode) => {
-        return m(".container", [
+        return m(".container.pico", [
             m("nav", 
                 m(m.route.Link, {href: "/"}, "Home"),
             ),
