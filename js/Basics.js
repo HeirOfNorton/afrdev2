@@ -28,16 +28,18 @@ function Basics () {
                         ),
                         m("label",
                             "Zip/Postal Code",
-                            m("input[type=number][name=zip]")
+                            m("input[type=text][name=zip]")
                         )
                     ),
-                    m("label",
-                        "Phone Number",
-                        m("input[type=tel][name=phone]")
-                    ),
-                    m("label",
-                        "Email",
-                        m("input[type=email][name=email][placeholder=yourname@example.com]")
+                    m(".grid",
+                        m("label",
+                            "Email",
+                            m("input[type=email][name=email][placeholder=yourname@example.com]")
+                        ),
+                        m("label",
+                            "Phone Number",
+                            m("input[type=tel][name=phone][placeholder=123-456-7890]")
+                        )
                     )
                 )
             )
