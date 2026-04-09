@@ -55,34 +55,34 @@ m.route(document.body, "/", {
     "/basics": {
         render: () => m(Layout, m(Basics))
     },
-    "/basics": {
+    "/work": {
         render: () => m(Layout, m(Work))
     },
-    "/basics": {
+    "/education": {
         render: () => m(Layout, m(Education))
     },
-    "/basics": {
+    "/skills": {
         render: () => m(Layout, m(Skills))
     },
-    "/basics": {
+    "/projects": {
         render: () => m(Layout, m(Projects))
     },
-    "/basics": {
+    "/awards": {
         render: () => m(Layout, m(Awards))
     },
-    "/basics": {
+    "/interests": {
         render: () => m(Layout, m(Interests))
     },
-    "/basics": {
+    "/photo": {
         render: () => m(Layout, m(Photo))
     },
-    "/basics": {
+    "/languages": {
         render: () => m(Layout, m(Languages))
     },
-    "/basics": {
+    "/volunteer": {
         render: () => m(Layout, m(Volunteer))
     },
-    "/basics": {
+    "/references": {
         render: () => m(Layout, m(References))
     },
 })
