@@ -20,16 +20,16 @@ const MainView = {
             m("nav", 
                 m("ul",
                     m("li", m(m.route.Link, {href: "/"}, "Home")),
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/work"}, "Work Experience"))
-                    m("li", m(m.route.Link, {href: "/education"}, "Education"))
-                    m("li", m(m.route.Link, {href: "/skills"}, "Skills"))
-                    m("li", m(m.route.Link, {href: "/projects"}, "Projects"))
-                    m("li", m(m.route.Link, {href: "/awards"}, "Awards"))
-                    m("li", m(m.route.Link, {href: "/interests"}, "Interests"))
-                    m("li", m(m.route.Link, {href: "/languages"}, "Languages"))
-                    m("li", m(m.route.Link, {href: "/photo"}, "Photograph"))
-                    m("li", m(m.route.Link, {href: "/volunteer"}, "Volunteer Experience"))
+                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information")),
+                    m("li", m(m.route.Link, {href: "/work"}, "Work Experience")),
+                    m("li", m(m.route.Link, {href: "/education"}, "Education")),
+                    m("li", m(m.route.Link, {href: "/skills"}, "Skills")),
+                    m("li", m(m.route.Link, {href: "/projects"}, "Projects")),
+                    m("li", m(m.route.Link, {href: "/awards"}, "Awards")),
+                    m("li", m(m.route.Link, {href: "/interests"}, "Interests")),
+                    m("li", m(m.route.Link, {href: "/languages"}, "Languages")),
+                    m("li", m(m.route.Link, {href: "/photo"}, "Photograph")),
+                    m("li", m(m.route.Link, {href: "/volunteer"}, "Volunteer Experience")),
                     m("li", m(m.route.Link, {href: "/references"}, "References"))
                 )
             ),
