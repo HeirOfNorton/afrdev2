@@ -21,16 +21,16 @@ const MainView = {
                 m("ul",
                     m("li", m(m.route.Link, {href: "/"}, "Home")),
                     m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
-                    m("li", m(m.route.Link, {href: "/basics"}, "Basic Information"))
+                    m("li", m(m.route.Link, {href: "/work"}, "Work Experience"))
+                    m("li", m(m.route.Link, {href: "/education"}, "Education"))
+                    m("li", m(m.route.Link, {href: "/skills"}, "Skills"))
+                    m("li", m(m.route.Link, {href: "/projects"}, "Projects"))
+                    m("li", m(m.route.Link, {href: "/awards"}, "Awards"))
+                    m("li", m(m.route.Link, {href: "/interests"}, "Interests"))
+                    m("li", m(m.route.Link, {href: "/languages"}, "Languages"))
+                    m("li", m(m.route.Link, {href: "/photo"}, "Photograph"))
+                    m("li", m(m.route.Link, {href: "/volunteer"}, "Volunteer Experience"))
+                    m("li", m(m.route.Link, {href: "/references"}, "References"))
                 )
             ),
         )
@@ -56,33 +56,33 @@ m.route(document.body, "/", {
         render: () => m(Layout, m(Basics))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Work))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Education))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Skills))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Projects))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Awards))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Interests))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Photo))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Languages))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(Volunteer))
     },
     "/basics": {
-        render: () => m(Layout, m(Basics))
+        render: () => m(Layout, m(References))
     },
 })
