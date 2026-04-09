@@ -20,7 +20,7 @@ const MainView = {
 
 const Layout = {
     view: (vnode) => {
-        return m("div", [
+        return m("div.container-fluid.pico.flexy", [
             m(Header),
             m("main.container.pico", vnode.children),
             m(Footer)

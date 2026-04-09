@@ -29,3 +29,17 @@ html, :root, :host {
     max-width: 950px;
   }
 }
+
+.flexy {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flexy > main {
+  flex-grow: 1;
+}
+
+.flexy > footer {
+  flex-shrink: 0;
+}
