@@ -1,4 +1,4 @@
-import ResumeModel from "./ResumeModel";
+import ResumeModel from "./ResumeModel.js";
 
 const section_order = {
     standard: [
