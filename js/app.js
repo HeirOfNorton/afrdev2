@@ -11,6 +11,8 @@ import Languages from "./Languages.js"
 import Photo from "./Photo.js"
 import Volunteer from "./Volunteer.js"
 import References from "./References.js"
+import Sections from "./Sections.js"
+import Guide from "./Guide.js"
 import {Header, Footer} from "./HeadFoot.js"
 
 // Temporary navigation while developing each page in isolation
@@ -20,6 +22,8 @@ const MainView = {
             m("nav", 
                 m("ul",
                     m("li", m(m.route.Link, {href: "/"}, "Home")),
+                    m("li", m(m.route.Link, {href: "/guide"}, "Guided Start")),
+                    m("li", m(m.route.Link, {href: "/sections"}, "List of Sections")),
                     m("li", m(m.route.Link, {href: "/basics"}, "Basic Information")),
                     m("li", m(m.route.Link, {href: "/work"}, "Work Experience")),
                     m("li", m(m.route.Link, {href: "/education"}, "Education")),
@@ -51,6 +55,12 @@ const Layout = {
 m.route(document.body, "/", {
     "/": {
         render: () => m(Layout, m(MainView))
+    },
+    "/sections": {
+        render: () => m(Layout, m(Sections))
+    },
+    "/guide": {
+        render: () => m(Layout, m(Guide))
     },
     "/basics": {
         render: () => m(Layout, m(Basics))
