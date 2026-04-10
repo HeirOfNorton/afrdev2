@@ -26,14 +26,14 @@ function Navigator () {
     return {
         oninit: (vnode) => {
             const node = m.route.get()
-            const rstyle = ResumeModel.data.style
-            next = NavigatorData[rstye][node]["next"]
+            const rstyle = ResumeModel.options.type
+            next = NavigatorData[rstyle][node]["next"]
             prev = NavigatorData[rstyle][node]["prev"]
             skip = NavigatorData[rstyle][node]["skip"]
         },
         view: (vnode) => {
             return m(".navigator",
-                vnode.childre
+                vnode.children
             )
         }
     }

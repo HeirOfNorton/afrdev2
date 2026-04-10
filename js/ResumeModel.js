@@ -55,6 +55,7 @@ const ResumeModel = {
         type: "standard",
         template: "basic",
         last_page: "home",
+        guided: null,
         basics: {
             summaryTitle: "Summary",
         },
