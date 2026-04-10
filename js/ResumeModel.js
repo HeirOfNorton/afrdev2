@@ -111,11 +111,11 @@ const ResumeModel = {
     loadFromLocal: () => {
         const newdata = window.localStorage.getItem("afr-data")
         if (newdata) {
-            ResumeModel.data = newdata
+            ResumeModel.data = JSON.parse(newdata)
         }
         const newopts = window.localStorage.getItem("afr-options")
         if (newopts) {
-            ResumeModel.options = newopts
+            ResumeModel.options = JSON.parse(newopts)
         }
     }
 }
