@@ -10,7 +10,12 @@ function Basics () {
                 m("fieldset",
                     m("label",
                         "Name",
-                        m("input[type=text][name=Name][placeholder=Full Name]")
+                        m("input[type=text][name=Name][placeholder=Full Name]",
+                            {
+                                value: model.name,
+                                oninput: e => {model.name = e.target.value}
+                            }
+                        )
                     ),
                     m("label",
                         "Address",
