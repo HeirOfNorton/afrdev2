@@ -120,4 +120,6 @@ const ResumeModel = {
     }
 }
 
+ResumeModel.loadFromLocal()
+
 export default ResumeModel
