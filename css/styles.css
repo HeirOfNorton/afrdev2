@@ -43,3 +43,9 @@ html, :root, :host {
 .flexy > footer {
   flex-shrink: 0;
 }
+
+.flexx {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

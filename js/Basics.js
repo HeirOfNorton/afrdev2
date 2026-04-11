@@ -172,8 +172,8 @@ function Basics () {
                         )
                     )
                 ),
-                m(Navigator.BackButton, {href: Navigator.getLast()}),
-                m("footer",
+                m("footer.flexx",
+                    m(Navigator.BackButton, {href: Navigator.getLast()}),
                     m(m.route.Link,
                         {
                             href: Navigator.getNext(),
