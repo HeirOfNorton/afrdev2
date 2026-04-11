@@ -1,4 +1,5 @@
 import ResumeModel from "./ResumeModel.js"
+import Navigator from "./Navigator.js"
 
 function Basics () {
     var model = ResumeModel.data.basics
@@ -171,10 +172,11 @@ function Basics () {
                         )
                     )
                 ),
+                m(Navigator.BackButton, {href: Navigator.getLast()}),
                 m("footer",
                     m(m.route.Link,
                         {
-                            href: "/",
+                            href: Navigator.getNext(),
                             role: "button",
                             onclick: e => {
                                 ResumeModel.saveToLocal()
