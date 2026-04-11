@@ -10,27 +10,29 @@ function Basics () {
                 m("fieldset",
                     m("label",
                         "Name",
-                        m("input[type=text][name=Name]",
+                        m("input[type=text][name=fullname]",
                             {
                                 value: model.name,
-                                placeholder: "Full Name",
+                                autocomplete: "name",
+                                required: true,
                                 oninput: e => {model.name = e.target.value}
                             }
                         )
                     ),
                     m("label",
                         "Address",
-                        m("input[type=text][name=address1][placeholder=123 Anywhere Lane]",
+                        m("input[type=text][name=address1]",
                             {
                                 value: model.location.address,
-                                placeholder: "123 Anywhere Lane",
+                                autocomplete: "home address-line1",
+                                required: true,
                                 oninput: e => {model.location.address = e.target.value}
                             }
                         ),
                         m("input[type=text][name=address2]",
                             {
                                 value: model.location.address_line2,
-                                placeholder: "Apt 101",
+                                autocomplete: "home address-line2",
                                 oninput: e => {model.location.address_line2 = e.target.value}
                             }
                         )
@@ -41,7 +43,8 @@ function Basics () {
                             m("input[type=text][name=city]",
                                 {
                                     value: model.location.city,
-                                    placeholder: "City",
+                                    autocomplete: "home address-level2",
+                                    required: true,
                                     oninput: e => {model.location.city = e.target.value}
                                 }
                             )
@@ -51,7 +54,8 @@ function Basics () {
                             m("input[type=text][name=state]",
                                 {
                                     value: model.location.state,
-                                    placeholder: "State",
+                                    autocomplete: "home address-level1",
+                                    required: true,
                                     oninput: e => {model.location.state = e.target.value}
                                 }
                             )
@@ -61,7 +65,8 @@ function Basics () {
                             m("input[type=text][name=zip]",
                                 {
                                     value: model.location.postalCode,
-                                    placeholder: "Zip",
+                                    autocomplete: "home postal-code",
+                                    required: true,
                                     oninput: e => {model.location.postalCode = e.target.value}
                                 }
                             )
@@ -70,20 +75,20 @@ function Basics () {
                     m(".grid",
                         m("label",
                             "Email",
-                            m("input[type=email][name=email][placeholder=yourname@example.com]",
+                            m("input[type=email][name=email]",
                                 {
                                     value: model.email,
-                                    placeholder: "yourname@example.com",
+                                    autocomplete: "home email",
                                     oninput: e => {model.email = e.target.value}
                                 }
                             )
                         ),
                         m("label",
                             "Phone Number",
-                            m("input[type=tel][name=phone][placeholder=123-456-7890]",
+                            m("input[type=tel][name=phone]",
                                 {
                                     value: model.phone,
-                                    placeholder: "123-456-7890",
+                                    autocomplete: "home tel",
                                     oninput: e => {model.phone = e.target.value}
                                 }
                             )
@@ -92,13 +97,14 @@ function Basics () {
                 ),
                 m("footer",
                     m(m.route.Link,
-                    {
-                        href: "/",
-                        role: "button",
-                        onclick: e => {
-                            ResumeModel.saveToLocal()
-                        }
-                    }
+                        {
+                            href: "/",
+                            role: "button",
+                            onclick: e => {
+                                ResumeModel.saveToLocal()
+                            }
+                        },
+                        "Save and Continue"
                     )
                 )
             )
