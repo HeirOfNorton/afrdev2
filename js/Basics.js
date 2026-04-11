@@ -1,20 +1,10 @@
 import ResumeModel from "./ResumeModel.js"
 
 function Basics () {
-    var model;
-    function loadModel () {
-        model = structuredClone(ResumeModel.data.basics)
-    }
-    function saveModel () {
-        ResumeModel.data.basics = structuredClone(model)
-        ResumeModel.saveToLocal()
-    }
+    var model = ResumeModel.data.basics
     
     return {
         view: (vnode) => m("form",
-            {
-                oninit: loadModel
-            },
             m("h1", "Basic Information"),
             m("article",
                 m("fieldset",
@@ -186,7 +176,9 @@ function Basics () {
                         {
                             href: "/",
                             role: "button",
-                            onclick: saveModel
+                            onclick: e => {
+                                ResumeModel.saveToLocal()
+                            }
                         },
                         "Save and Continue"
                     )
