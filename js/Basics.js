@@ -13,7 +13,7 @@ function Basics () {
     return {
         view: (vnode) => m("form",
             {
-                oninit: () => {Basics.loadModel()}
+                oninit: () => {loadModel()}
             },
             m("h1", "Basic Information"),
             m("article",
@@ -187,7 +187,7 @@ function Basics () {
                             href: "/",
                             role: "button",
                             onclick: e => {
-                                Basics.saveModel()
+                                saveModel()
                             }
                         },
                         "Save and Continue"
