@@ -59,7 +59,7 @@ function Basics () {
                                     oninput: e => {model.location.state = e.target.value}
                                 },
                                 m("option", {selected: true, disabled: true, value: ""}, "Select state/province..."),
-                                m("optgroup", {name: "United States and Territories"},
+                                m("optgroup", {label: "United States and Territories"},
                                     m("option", {value: "AK"}, "Alaska"),
                                     m("option", {value: "AL"}, "Alabama"),
                                     m("option", {value: "AR"}, "Arkansas"),
@@ -118,7 +118,7 @@ function Basics () {
                                     m("option", {value: "UM"}, "United States Minor Outlying Islands"),
                                     m("option", {value: "VI"}, "Virgin Islands"),
                                 ),
-                                m("optgroup", {name: "Canada"},
+                                m("optgroup", {label: "Canada"},
                                     m("option", {value: "AB"}, "Alberta"),
                                     m("option", {value: "BC"}, "British Columbia"),
                                     m("option", {value: "MB"}, "Manitoba"),
