@@ -58,3 +58,7 @@ html, :root, :host {
   text-align: center;
   font-weight: bold;
 }
+
+td.wide {
+  width: 100%;
+}
