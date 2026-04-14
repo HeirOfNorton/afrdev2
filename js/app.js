@@ -2,7 +2,7 @@
 
 import Basics from "./Basics.js"
 import Work from "./Work.js"
-import WorkEdit from ".WorkEdit.js"
+import WorkEdit from "./WorkEdit.js"
 import Education from "./Education.js"
 import Skills from "./Skills.js"
 import Projects from "./Projects.js"
