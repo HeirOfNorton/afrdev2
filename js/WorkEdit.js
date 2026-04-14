@@ -37,7 +37,60 @@ function WorkEdit() {
                                 oninput: e => {itemModel.position = e.target.value}
                             }
                         )
-                    )
+                    ),
+                    m("label",
+                        "Company / Organization",
+                        m("input[type=text][name=organization]",
+                            {
+                                value: itemModel.organization,
+                                required: true,
+                                oninput: e => {itemModel.organization = e.target.value}
+                            }
+                        )
+                    ),
+                    m("label",
+                        "Location",
+                        m("input[type=text][name=location]",
+                            {
+                                value: itemModel.location,
+                                required: true,
+                                oninput: e => {itemModel.location = e.target.value}
+                            }
+                        )
+                    ),
+                    m(".grid",
+                        m("label",
+                            "Start Date",
+                            m("input[type=date][name=startDate]",
+                                {
+                                    value: itemModel.location,
+                                    oninput: e => {itemModel.startDate = e.target.value}
+                                }
+                            )
+                        ),
+                        m("label",
+                            m("input[type=checkbox][name=current]",
+                                {
+                                    checked: itemModel.endDate == "current",
+                                    onchange: e => {
+                                        itemModel.endDate = e.target.checked ? "current" : ""
+                                    }
+                                }
+                            ),
+                            "I still work here"
+                        ),
+                        m("label",
+                            "End Date",
+                            m("input[type=date][name=endDate]",
+                                {
+                                    value: itemModel.endDate == "current" ? "" : itemModel.endDate,
+                                    disabled: itemModel.endDate == "current",
+                                    oninput: e => {itemModel.endDate = e.target.value}
+                                }
+                            )
+                        )
+                    ),
+                    "Highlights will go here"
                 ),
                 m("footer",
                     m("button.secondary", {
@@ -51,7 +104,7 @@ function WorkEdit() {
                                 history.back()
                             }
                         },
-                        "Confirm"
+                        "Save"
                     )
                 )
             )
