@@ -54,7 +54,7 @@ html, :root, :host {
 
 .pico td [role=button],
 .pico td button {
-  width: 50%;
+  width: 100%;
   text-align: center;
   font-weight: bold;
 }

@@ -23,7 +23,7 @@ function Sections () {
             m("table",
                 section_order.standard.map(function(sect) {
                     return m("tr",
-                        m("td", "Description per line: " + sect),
+                        m("td.wide", "Description per line: " + sect),
                         m("td", m(
                             m.route.Link, {href: "/"+sect, role: "button"}, sect
                         ))

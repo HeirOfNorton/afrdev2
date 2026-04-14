@@ -15,7 +15,7 @@ const Work = {
         m("h1", "Work Experience"),
         m("table",
             ResumeModel.data.work.map((item, index) => m("tr",
-                m("td",
+                m("td.wide",
                     m("h3", item.position),
                     m("h2", item.organization),
                     m("p",
@@ -29,7 +29,7 @@ const Work = {
             )),
             m("tr",
                 m("td"),
-                m("td", m("button", "Add"))
+                m("td", m("button.outline", "Add"))
             )
         ),
         m("footer.flexx",
