@@ -8,20 +8,21 @@ function Basics () {
         view: (vnode) => m("form",
             m("h1", "Basic Information"),
             m("article",
+                m("label",
+                    "Name",
+                    m("input[type=text][name=fullname]",
+                        {
+                            value: model.name,
+                            autocomplete: "name",
+                            required: true,
+                            oninput: e => {model.name = e.target.value}
+                        }
+                    )
+                ),
                 m("fieldset",
+                    m("legend", "Address"),
                     m("label",
-                        "Name",
-                        m("input[type=text][name=fullname]",
-                            {
-                                value: model.name,
-                                autocomplete: "name",
-                                required: true,
-                                oninput: e => {model.name = e.target.value}
-                            }
-                        )
-                    ),
-                    m("label",
-                        "Address",
+                        "line 1",
                         m("input[type=text][name=address1]",
                             {
                                 value: model.location.address,
@@ -30,6 +31,9 @@ function Basics () {
                                 oninput: e => {model.location.address = e.target.value}
                             }
                         ),
+                    ),
+                    m("label",
+                        "line 1 (optional)",
                         m("input[type=text][name=address2]",
                             {
                                 value: model.location.address_line2,
@@ -148,28 +152,36 @@ function Basics () {
                                 }
                             )
                         )
-                    ),
-                    m(".grid",
-                        m("label",
-                            "Email",
-                            m("input[type=email][name=email]",
-                                {
-                                    value: model.email,
-                                    autocomplete: "home email",
-                                    oninput: e => {model.email = e.target.value}
-                                }
-                            )
-                        ),
-                        m("label",
-                            "Phone Number",
-                            m("input[type=tel][name=phone]",
-                                {
-                                    value: model.phone,
-                                    autocomplete: "home tel",
-                                    oninput: e => {model.phone = e.target.value}
-                                }
-                            )
-                        )
+                    )
+                ),
+                m("label",
+                    "Email",
+                    m("input[type=email][name=email]",
+                        {
+                            value: model.email,
+                            autocomplete: "home email",
+                            oninput: e => {model.email = e.target.value}
+                        }
+                    )
+                ),
+                m("label",
+                    "Phone Number",
+                    m("input[type=tel][name=phone]",
+                        {
+                            value: model.phone,
+                            autocomplete: "home tel",
+                            oninput: e => {model.phone = e.target.value}
+                        }
+                    )
+                ),
+                m("label",
+                    "Website (optional)",
+                    m("input[type=url][name=website]",
+                        {
+                            value: model.website,
+                            autocomplete: "home url",
+                            oninput: e => {model.website = e.target.value}
+                        }
                     )
                 ),
                 m("footer.flexx",

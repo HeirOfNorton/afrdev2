@@ -5,6 +5,7 @@ const ResumeModel = {
             name: "",
             phone: "",
             email: "",
+            website: "",
             image: null,
             url: "",
             summary: "",
