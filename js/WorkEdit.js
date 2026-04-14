@@ -63,7 +63,7 @@ function WorkEdit() {
                             "Start Date",
                             m("input[type=date][name=startDate]",
                                 {
-                                    value: itemModel.location,
+                                    value: itemModel.startDate,
                                     oninput: e => {itemModel.startDate = e.target.value}
                                 }
                             )
