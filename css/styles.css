@@ -1,5 +1,6 @@
 html, :root, :host {
     --pico-font-size: 100%;
+    background-color: #f2f4f6;
 }
 
 @media (min-width: 576px) {
@@ -49,4 +50,11 @@ html, :root, :host {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.pico td [role=button],
+.pico td button {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
 }
