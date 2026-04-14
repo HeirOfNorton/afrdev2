@@ -19,7 +19,22 @@ const ResumeModel = {
             }
         },
         work: [
-
+            {
+                position: "Librarian",
+                organization: "HCL",
+                location: "Brooklyn Center, MN",
+                startDate: "2015-10-17",
+                endDate: "current",
+                highlights: []
+            },
+            {
+                position: "Department Supervisor",
+                organization: "J.C. Penney",
+                location: "Roseville, MN",
+                startDate: "2004-09-18",
+                endDate: "2015-10-18",
+                highlights: []
+            }
         ],
         education: [
 
