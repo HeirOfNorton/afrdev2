@@ -33,7 +33,7 @@ function Basics () {
                         ),
                     ),
                     m("label",
-                        "line 1 (optional)",
+                        "line 2 (optional)",
                         m("input[type=text][name=address2]",
                             {
                                 value: model.location.address_line2,
