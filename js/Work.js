@@ -19,10 +19,10 @@ const Work = {
                     m("h3", item.position),
                     m("h2", item.organization),
                     m("p",
-                        Date(item.startDate).toLocaleDateString(undefined, {month:"long", year:"numeric"}),
+                        new Date(item.startDate).toLocaleDateString(undefined, {month:"long", year:"numeric"}),
                         " &ndash; ",
                         item.endDate == "current" ? "current" : 
-                            Date(item.endDate).toLocaleDateString(undefined, {month:"long", year:"numeric"})
+                            new Date(item.endDate).toLocaleDateString(undefined, {month:"long", year:"numeric"})
                     )
                 ),
                 m("td", m("button", "Edit"))
