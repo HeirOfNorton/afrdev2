@@ -25,11 +25,23 @@ const Work = {
                             new Date(item.endDate).toLocaleDateString(undefined, {month:"long", year:"numeric"})
                     )
                 ),
-                m("td", m("button", "Edit"))
+                m("td", m(m.route.Link,
+                    {
+                        href: "/work/edit/" + index,
+                        role: "button"
+                    },
+                    "Edit"
+                ))
             )),
             m("tr",
                 m("td"),
-                m("td", m("button.outline", "Add"))
+                m("td", m(m.route.Link,
+                    {
+                        href: "/work/edit/" + ResumeModel.data.work.length,
+                        role: "button",
+                        class: "outline"
+                    },
+                    "Add"))
             )
         ),
         m("footer.flexx",

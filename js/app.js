@@ -2,6 +2,7 @@
 
 import Basics from "./Basics.js"
 import Work from "./Work.js"
+import WorkEdit from ".WorkEdit.js"
 import Education from "./Education.js"
 import Skills from "./Skills.js"
 import Projects from "./Projects.js"
@@ -67,6 +68,9 @@ m.route(document.body, "/", {
     },
     "/work": {
         render: () => m(Layout, m(Work))
+    },
+    "/work/edit/:idx": {
+        render: () => m(Layout, m(Work), m(WorkEdit))
     },
     "/education": {
         render: () => m(Layout, m(Education))
