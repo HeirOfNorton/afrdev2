@@ -1,15 +1,6 @@
 import ResumeModel from "./ResumeModel.js"
 import Navigator from "./Navigator.js"
 
-const blankWorkItem = {
-    position: "",
-    organization: "",
-    location: "",
-    startDate: "",
-    endDate: "",
-    highlights: []
-}
-
 const Work = {
     view: (vnode) => m("section",
         m("h1", "Work Experience"),
