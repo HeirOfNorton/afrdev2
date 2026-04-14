@@ -7,12 +7,12 @@ const WorkEdit = {
             m("h2", "Testing, Item #" + vnode.attrs.idx),
             m("footer",
                 m("button.secondary", {
-                    onclick: History.back
+                    onclick: () => {History.back()}
                 },
                 "Cancel"),
                 m("button",
                     {
-                        onclick: History.back
+                        onclick: () => {History.back()}
                     },
                     "Confirm"
                 )
