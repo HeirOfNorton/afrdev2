@@ -4,15 +4,15 @@ const WorkEdit = {
     view: (vnode) => m(
         "dialog[open]",
         m("article",
-            m("h2", "Testing, Item #" + vnode.attrs.idx),
+            m("h2", "Testing, Item #" + m.route.param("idx")),
             m("footer",
                 m("button.secondary", {
-                    onclick: () => {History.back()}
+                    onclick: () => {history.back()}
                 },
                 "Cancel"),
                 m("button",
                     {
-                        onclick: () => {History.back()}
+                        onclick: () => {history.back()}
                     },
                     "Confirm"
                 )
