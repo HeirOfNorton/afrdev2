@@ -69,27 +69,27 @@ function WorkEdit() {
                             )
                         ),
                         m("fieldset",
-                        m("label",
-                            m("input[type=checkbox][name=current]",
-                                {
-                                    checked: itemModel.endDate == "current",
-                                    onchange: e => {
-                                        itemModel.endDate = e.target.checked ? "current" : ""
+                            m("label",
+                                "End Date",
+                                m("input[type=date][name=endDate]",
+                                    {
+                                        value: itemModel.endDate == "current" ? "" : itemModel.endDate,
+                                        disabled: itemModel.endDate == "current",
+                                        oninput: e => {itemModel.endDate = e.target.value}
                                     }
-                                }
+                                )
                             ),
-                            "I still work here"
-                        ),
-                        m("label",
-                            "End Date",
-                            m("input[type=date][name=endDate]",
-                                {
-                                    value: itemModel.endDate == "current" ? "" : itemModel.endDate,
-                                    disabled: itemModel.endDate == "current",
-                                    oninput: e => {itemModel.endDate = e.target.value}
-                                }
+                            m("label",
+                                m("input[type=checkbox][name=current]",
+                                    {
+                                        checked: itemModel.endDate == "current",
+                                        onchange: e => {
+                                            itemModel.endDate = e.target.checked ? "current" : ""
+                                        }
+                                    }
+                                ),
+                                "I still work here"
                             )
-                        )
                         )
                     ),
                     "Highlights will go here"
