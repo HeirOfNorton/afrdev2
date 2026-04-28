@@ -68,16 +68,23 @@ function WorkEdit() {
                                 }
                             )
                         ),
-                        m("label",
-                            m("input[type=checkbox][name=current]",
+                        m("fieldset",
+                            m("legend", "Do you still work here?"),
+                            m("input[type=checkbox][name=work-edit-date-current]",
                                 {
                                     checked: itemModel.endDate == "current",
+                                    id: "work-edit-date-current",
                                     onchange: e => {
                                         itemModel.endDate = e.target.checked ? "current" : ""
                                     }
                                 }
                             ),
-                            "I still work here"
+                            m("label",
+                                {
+                                    htmlfor: "work-edit-date-current"
+                                },
+                                "Yes, I still work here."
+                             )
                         ),
                         m("label",
                             "End Date",
