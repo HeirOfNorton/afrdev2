@@ -68,6 +68,7 @@ function WorkEdit() {
                                 }
                             )
                         ),
+                        m("fieldset",
                         m("label",
                             m("input[type=checkbox][name=current]",
                                 {
@@ -88,6 +89,7 @@ function WorkEdit() {
                                     oninput: e => {itemModel.endDate = e.target.value}
                                 }
                             )
+                        )
                         )
                     ),
                     "Highlights will go here"
