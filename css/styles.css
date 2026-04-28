@@ -62,3 +62,7 @@ html, :root, :host {
 td.wide {
   width: 100%;
 }
+
+input[name=endDate] {
+  margin-bottom: auto;
+}
